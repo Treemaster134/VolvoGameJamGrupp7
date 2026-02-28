@@ -6,6 +6,8 @@ public class MachineManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private string acceptedPant;
+    [SerializeField] private float score;
+    
     void Start()
     {
       
@@ -21,11 +23,11 @@ public class MachineManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag(acceptedPant))
         {
-         
+            score += other.gameObject.GetComponent<PantInformation>().value;
         }
         else
         {
-            
+          score -= other.gameObject.GetComponent<PantInformation>().value;
         }
         throw new NotImplementedException();
     }
