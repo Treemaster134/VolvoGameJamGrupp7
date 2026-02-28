@@ -42,6 +42,7 @@ public class ThrowController : MonoBehaviour
             {
                 pant = c.gameObject;
                 c.transform.position = HandTransform.position;
+                wasThrown = false;
             }
             else
             {
