@@ -6,26 +6,43 @@ public class MachineUpgrades : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] ScoreManager score;
-    [SerializeField] List<float> cost;
+   
+    [SerializeField] private GameObject storPET;
+    [SerializeField]private GameObject metalCan;
+    [SerializeField]private GameObject glassBottle;
+    [SerializeField] private Rullband rullband;
+    [SerializeField]private GameObject metalMachine, glassMachine;
+    
     private UpgradeEnum upgrade;
     void Start()
     {
-      upgrade = GetComponent<UpgradeEnum>();
+      upgrade = new UpgradeEnum();
       upgrade = UpgradeEnum.First;
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void NewMachine(int cost)
     {
-      
-    }
-
-    public void NewMachine(Transform Glass, Transform Metal)
-    {
-        if (upgrade == UpgradeEnum.First && score.Score >= cost[0])
+        if (upgrade == UpgradeEnum.First && score.Score >= cost)
         {
-            score.Score -= cost[0];
-            
+            score.Score -= cost;
+            rullband.Pant.Add(storPET);
+            upgrade = UpgradeEnum.Second;
+        }
+
+        if (upgrade == UpgradeEnum.Second && score.Score >= cost)
+        {
+            score.Score -= cost;
+            metalMachine.SetActive(true);
+            metalMachine.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            rullband.Pant.Add(metalCan);
+        }
+
+        if (upgrade == UpgradeEnum.Third && score.Score >= cost)
+        {
+            score.Score -= cost;
+            glassMachine.SetActive(true);
+            glassMachine.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            rullband.Pant.Add(glassBottle);
         }
     }
 }
