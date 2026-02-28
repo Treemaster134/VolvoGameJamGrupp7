@@ -1373,10 +1373,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4881551482790334936, guid: 8c21bdc4525682749b27067510f31311, type: 3}
-      propertyPath: m_SortingOrder
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 6250527635902066260, guid: 8c21bdc4525682749b27067510f31311, type: 3}
       propertyPath: m_Name
       value: Pant
