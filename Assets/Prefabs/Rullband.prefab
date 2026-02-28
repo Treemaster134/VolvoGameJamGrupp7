@@ -78,7 +78,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   one: {fileID: 1488063923125648384}
-  pant: []
+  Pant:
+  - {fileID: 6250527635902066260, guid: 8c21bdc4525682749b27067510f31311, type: 3}
   WaitTime: 3
   mask:
     serializedVersion: 2

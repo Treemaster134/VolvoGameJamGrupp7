@@ -16,6 +16,7 @@ public class ThrowController : MonoBehaviour
     [SerializeField] private float maxLineLength;
     [SerializeField] private float maxThrowStrength;
     [SerializeField] private Transform BeltLocation;
+    [SerializeField] private Transform HandTransform;
     [SerializeField] private LayerMask mask;
     private GameObject pant;
     
@@ -40,6 +41,7 @@ public class ThrowController : MonoBehaviour
             if (c && grabAction.IsPressed())
             {
                 pant = c.gameObject;
+                c.transform.position = HandTransform.position;
             }
             else
             {
@@ -55,7 +57,7 @@ public class ThrowController : MonoBehaviour
                 lineRenderer.enabled = true;
                 Vector2 mousePosition = aimAction.ReadValue<Vector2>();
                 
-                delta = cam.ScreenToWorldPoint(new Vector3(Mathf.Round(mousePosition.x), Mathf.Round(mousePosition.y), 0)) - transform.position;
+                delta = cam.ScreenToWorldPoint(new Vector3(Mathf.Round(mousePosition.x), Mathf.Round(mousePosition.y), 0)) - HandTransform.position;
                 
                 float lineLength = Mathf.Min(maxLineLength, delta.magnitude);
                 float strength = CoolCurve(lineLength / maxLineLength) * maxThrowStrength;
@@ -63,8 +65,8 @@ public class ThrowController : MonoBehaviour
                 
                 delta = delta.normalized * -strength;
                 
-                lineRenderer.SetPosition(0, transform.position);
-                lineRenderer.SetPosition(1, transform.position + lineDelta);
+                lineRenderer.SetPosition(0, HandTransform.position);
+                lineRenderer.SetPosition(1, HandTransform.position + lineDelta);
             }
             else
             {
