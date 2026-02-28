@@ -29,7 +29,9 @@ public class ThrowController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (holdingThrow && !thrown)
+        if(wasThrown) {return;}
+        
+        if (holdingThrow)
         {
             Vector3 delta = Vector3.zero;
             if(throwAction.IsPressed())
@@ -48,7 +50,7 @@ public class ThrowController : MonoBehaviour
             {
                 rb.constraints = RigidbodyConstraints2D.None;
                 rb.linearVelocity = delta;
-                thrown = true;
+                wasThrown = true;
             }
         }
 
