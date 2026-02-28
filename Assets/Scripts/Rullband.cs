@@ -34,7 +34,7 @@ public class Rullband : MonoBehaviour
         yield return new WaitForSeconds(WaitTime);
         Instantiate(pant[0], one.position, one.rotation);
         coroutineStarted = false;
-        Debug.Log([0]);
+       
     }
 
     private void OnDrawGizmosSelected()
