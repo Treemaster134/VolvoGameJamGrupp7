@@ -127,7 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   one: {fileID: 1488063923125648384}
-  petfalska: {fileID: 0}
+  petfalska: {fileID: 6250527635902066260, guid: 8c21bdc4525682749b27067510f31311, type: 3}
+  WaitTime: 3
 --- !u!1 &4668553914048196887
 GameObject:
   m_ObjectHideFlags: 0
