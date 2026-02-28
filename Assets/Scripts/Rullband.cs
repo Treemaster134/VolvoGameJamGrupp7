@@ -8,7 +8,7 @@ public class Rullband : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private Transform one;
    
-    [SerializeField] public List<GameObject> pant;
+    public List<GameObject> Pant;
     [SerializeField] private float WaitTime;
     [SerializeField] private LayerMask mask;
     private float timer = 3.0f;
@@ -28,7 +28,7 @@ public class Rullband : MonoBehaviour
 
             if (timer <= 0.0f)
             {
-                Instantiate(pant[UnityEngine.Random.Range(0, pant.Count)], one.position, one.rotation);
+                Instantiate(Pant[UnityEngine.Random.Range(0, Pant.Count)], one.position, one.rotation);
                 timer = WaitTime;
             }
         }
