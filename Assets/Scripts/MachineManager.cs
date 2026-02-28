@@ -31,6 +31,5 @@ public class MachineManager : MonoBehaviour
           score.Score -= other.gameObject.GetComponent<PantInformation>().value;
           Destroy(other.gameObject);
         }
-        throw new NotImplementedException();
     }
 }
