@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1084083046426623745}
   m_Layer: 3
   m_Name: Pant
-  m_TagString: Untagged
+  m_TagString: PET
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
   maxLineLength: 4
   maxThrowStrength: 30
   info:
-    value: 0
+    value: 1
 --- !u!50 &3535990739067489211
 Rigidbody2D:
   serializedVersion: 5

@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5342231408091017494}
   m_Layer: 0
-  m_Name: PetPant
+  m_Name: PETMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
