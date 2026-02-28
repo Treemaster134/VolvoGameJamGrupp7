@@ -8,10 +8,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2311150068481368254, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4346870859608940448, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2178897951285389748, guid: 9372887476cd3d546b83f0b064afda3e, type: 3}
+    - target: {fileID: 4346870859608940448, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
+      propertyPath: m_Color.b
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346870859608940448, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
+      propertyPath: m_Color.g
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4346870859608940448, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
+      propertyPath: m_Color.r
+      value: 0.33333334
+      objectReference: {fileID: 0}
     - target: {fileID: 4851866365886335545, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
       propertyPath: m_Name
       value: MetalMachine
@@ -22,11 +38,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5342231408091017494, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.61
       objectReference: {fileID: 0}
     - target: {fileID: 5342231408091017494, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5342231408091017494, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
       propertyPath: m_LocalPosition.z
