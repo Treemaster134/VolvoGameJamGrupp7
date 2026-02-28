@@ -11,7 +11,9 @@ public class ThrowController : MonoBehaviour
     private Camera cam;
     private bool holdingThrow = false;
     private bool wasThrown = false;
-    [SerializeField] private float maxDistance;
+    private Vector2 delta = Vector2.zero;
+    [SerializeField] private float maxLineLength;
+    [SerializeField] private float maxThrowStrength;
     public PantInformation info;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,27 +35,36 @@ public class ThrowController : MonoBehaviour
         
         if (holdingThrow)
         {
-            Vector3 delta = Vector3.zero;
             if(throwAction.IsPressed())
             {
+                lineRenderer.enabled = true;
                 Vector2 mousePosition = aimAction.ReadValue<Vector2>();
                 
                 delta = cam.ScreenToWorldPoint(new Vector3(Mathf.Round(mousePosition.x), Mathf.Round(mousePosition.y), 0)) - transform.position;
-                float strength = Mathf.Min(maxDistance, delta.magnitude);
+                
+                float lineLength = Mathf.Min(maxLineLength, delta.magnitude);
+                float strength = CoolCurve(maxLineLength / lineLength) * maxThrowStrength;
+                Vector3 lineDelta = delta.normalized * -lineLength;
                 
                 delta = delta.normalized * -strength;
                 
                 lineRenderer.SetPosition(0, transform.position);
-                lineRenderer.SetPosition(1, transform.position + delta);
+                lineRenderer.SetPosition(1, transform.position + lineDelta);
             }
             else
             {
                 rb.constraints = RigidbodyConstraints2D.None;
                 rb.linearVelocity = delta;
+                lineRenderer.enabled = false;
                 wasThrown = true;
             }
         }
 
         holdingThrow = throwAction.IsPressed();
+    }
+
+    float CoolCurve(float x)
+    {
+        return (x / Mathf.Sqrt(1.0f + x * x)) * 1.4f;
     }
 }
