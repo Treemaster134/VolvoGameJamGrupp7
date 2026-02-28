@@ -838,39 +838,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 561385276361310756, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3.008
-      objectReference: {fileID: 0}
-    - target: {fileID: 561385276361310756, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.4125
-      objectReference: {fileID: 0}
-    - target: {fileID: 561385276361310756, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.004
-      objectReference: {fileID: 0}
-    - target: {fileID: 561385276361310756, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.2062
-      objectReference: {fileID: 0}
-    - target: {fileID: 1488063923125648384, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 1488063923125648384, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.33
-      objectReference: {fileID: 0}
     - target: {fileID: 2426087560822619010, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
       propertyPath: m_Name
       value: Rullband
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 777404172213558749, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 7545888577649799619, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
-    - {fileID: 7703216160005306728, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
