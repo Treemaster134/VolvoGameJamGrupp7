@@ -8,33 +8,32 @@ public class Rullband : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private Transform one;
    
-    [SerializeField]public List<GameObject> pant;
-    [SerializeField]private float WaitTime;
-    private bool coroutineStarted;
-    
+    [SerializeField] public List<GameObject> pant;
+    [SerializeField] private float WaitTime;
+    [SerializeField] private LayerMask mask;
+    private float timer = 3.0f;
     void Start()
     {
-      
+        timer = WaitTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*Debug.Log(Physics2D.OverlapBox(one.position, Vector3.one, 0, 3));
-        if (!Physics2D.OverlapBox(one.position, Vector3.one, 0, 3) && !coroutineStarted)
+        //Debug.Log(Physics2D.OverlapBox(one.position, Vector3.one, 0, 3));
+        
+        if (!Physics2D.OverlapBox(one.position, Vector3.one, 0, mask))
         {
-            coroutineStarted = true;
-           StartCoroutine(Instantiate());
-        }*/
+            timer -= Time.deltaTime;
 
-    }
+            if (timer <= 0.0f)
+            {
+                Instantiate(pant[UnityEngine.Random.Range(0, pant.Count)], one.position, one.rotation);
+                timer = WaitTime;
+            }
+        }
 
-    IEnumerator Instantiate()
-    {
-        yield return new WaitForSeconds(WaitTime);
-        Instantiate(pant[0], one.position, one.rotation);
-        coroutineStarted = false;
-       
+
     }
 
     private void OnDrawGizmosSelected()
