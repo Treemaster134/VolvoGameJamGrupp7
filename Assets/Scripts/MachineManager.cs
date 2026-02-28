@@ -23,14 +23,13 @@ public class MachineManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag(acceptedPant))
         {
-            score.Score += other.gameObject.GetComponent<ThrowController>().info.value;
+            score.Score += other.gameObject.GetComponent<PantInformation>().value;
             Destroy(other.gameObject);
         }
         else
         {
-          score.Score -= other.gameObject.GetComponent<ThrowController>().info.value;
+          score.Score -= other.gameObject.GetComponent<PantInformation>().value;
           Destroy(other.gameObject);
         }
-        throw new NotImplementedException();
     }
 }

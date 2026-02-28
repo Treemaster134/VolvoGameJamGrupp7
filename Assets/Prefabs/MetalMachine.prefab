@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MetalMachine
       objectReference: {fileID: 0}
+    - target: {fileID: 5275181801293817139, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
+      propertyPath: acceptedPant
+      value: Metal
+      objectReference: {fileID: 0}
     - target: {fileID: 5342231408091017494, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
