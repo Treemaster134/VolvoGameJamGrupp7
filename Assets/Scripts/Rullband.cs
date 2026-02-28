@@ -20,12 +20,12 @@ public class Rullband : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Physics2D.OverlapBox(one.position, Vector3.one, 0, 3));
+        /*Debug.Log(Physics2D.OverlapBox(one.position, Vector3.one, 0, 3));
         if (!Physics2D.OverlapBox(one.position, Vector3.one, 0, 3) && !coroutineStarted)
         {
             coroutineStarted = true;
            StartCoroutine(Instantiate());
-        }
+        }*/
 
     }
 
