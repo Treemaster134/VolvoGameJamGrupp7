@@ -17,11 +17,8 @@ public class Rullband : MonoBehaviour
         timer = WaitTime;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //Debug.Log(Physics2D.OverlapBox(one.position, Vector3.one, 0, 3));
-        
         if (!Physics2D.OverlapBox(one.position, Vector3.one, 0, mask))
         {
             timer -= Time.deltaTime;
@@ -32,17 +29,16 @@ public class Rullband : MonoBehaviour
                 timer = WaitTime;
             }
         }
-
-
+        
     }
 
     private void OnDrawGizmosSelected()
     {
         if (one != null)
         {
-                // Draw a yellow sphere at the transform's position
-                Gizmos.color = Color.yellow;
-                Gizmos.DrawWireCube(one.position, Vector3.one);
+            // Draw a yellow sphere at the transform's position
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireCube(one.position, Vector3.one);
         }
         
     }
