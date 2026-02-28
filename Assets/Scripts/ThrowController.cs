@@ -43,7 +43,7 @@ public class ThrowController : MonoBehaviour
                 delta = cam.ScreenToWorldPoint(new Vector3(Mathf.Round(mousePosition.x), Mathf.Round(mousePosition.y), 0)) - transform.position;
                 
                 float lineLength = Mathf.Min(maxLineLength, delta.magnitude);
-                float strength = CoolCurve(maxLineLength / lineLength) * maxThrowStrength;
+                float strength = CoolCurve(lineLength / maxLineLength) * maxThrowStrength;
                 Vector3 lineDelta = delta.normalized * -lineLength;
                 
                 delta = delta.normalized * -strength;
