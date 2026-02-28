@@ -6,6 +6,7 @@ public class ThrowController : MonoBehaviour
     
     private InputAction aimAction;
     private InputAction throwAction;
+    private InputAction grabAction;
     private LineRenderer lineRenderer;
     private Rigidbody2D rb;
     private Camera cam;
@@ -14,24 +15,38 @@ public class ThrowController : MonoBehaviour
     private Vector2 delta = Vector2.zero;
     [SerializeField] private float maxLineLength;
     [SerializeField] private float maxThrowStrength;
-    public PantInformation info;
+    [SerializeField] private Transform BeltLocation;
+    [SerializeField] private LayerMask mask;
+    private GameObject pant;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         aimAction = InputSystem.actions.FindAction("Aim");
         throwAction = InputSystem.actions.FindAction("Throw");
+        grabAction = InputSystem.actions.FindAction("Grab");
         
         lineRenderer = GetComponent<LineRenderer>();
-        rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
-        Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(wasThrown) {return;}
+        if (wasThrown || pant == null)
+        {
+            Collider2D c = Physics2D.OverlapBox(BeltLocation.position, Vector3.one, 0, mask);
+
+            if (c && grabAction.IsPressed())
+            {
+                pant = c.gameObject;
+            }
+            else
+            {
+                return;
+            }
+            
+        }
         
         if (holdingThrow)
         {
@@ -53,6 +68,7 @@ public class ThrowController : MonoBehaviour
             }
             else
             {
+                Rigidbody2D rb = pant.GetComponent<Rigidbody2D>();
                 rb.constraints = RigidbodyConstraints2D.None;
                 rb.linearVelocity = delta;
                 lineRenderer.enabled = false;

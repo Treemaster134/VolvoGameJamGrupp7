@@ -1932,6 +1932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1562339918}
   - component: {fileID: 1562339917}
+  - component: {fileID: 1562339919}
   m_Layer: 0
   m_Name: "tillf\xE4lligt heml\xF6sa bob_0"
   m_TagString: Untagged
@@ -2009,6 +2010,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1562339919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562339916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bde224e9d05e2a4186580a81be7cd48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLineLength: 4
+  maxThrowStrength: 30
+  BeltLocation: {fileID: 1844976532}
+  info:
+    value: 0
 --- !u!1 &1568462688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2162,6 +2180,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
+--- !u!4 &1844976532 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1488063923125648384, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
+  m_PrefabInstance: {fileID: 3993894647731446359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1943756442
 GameObject:
   m_ObjectHideFlags: 0
