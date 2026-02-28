@@ -1440,6 +1440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PurchaseUI
       objectReference: {fileID: 0}
+    - target: {fileID: 2772437685753650863, guid: 1f10f59a7d40e0b4fb4397f989b97442, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4210568226803873442, guid: 1f10f59a7d40e0b4fb4397f989b97442, type: 3}
       propertyPath: m_text
       value: Back
