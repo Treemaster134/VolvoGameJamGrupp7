@@ -10,6 +10,7 @@ public class ThrowController : MonoBehaviour
     private Rigidbody2D rb;
     private Camera cam;
     private bool holdingThrow = false;
+    private bool wasThrown = false;
     [SerializeField] private float maxDistance;
     public PantInformation info;
     
@@ -22,27 +23,32 @@ public class ThrowController : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
+        Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (holdingThrow)
+        if (holdingThrow && !thrown)
         {
             Vector3 delta = Vector3.zero;
             if(throwAction.IsPressed())
             {
                 Vector2 mousePosition = aimAction.ReadValue<Vector2>();
+                
                 delta = cam.ScreenToWorldPoint(new Vector3(Mathf.Round(mousePosition.x), Mathf.Round(mousePosition.y), 0)) - transform.position;
                 float strength = Mathf.Min(maxDistance, delta.magnitude);
-            
+                
+                delta = delta.normalized * -strength;
+                
                 lineRenderer.SetPosition(0, transform.position);
-                lineRenderer.SetPosition(1, transform.position - delta.normalized * strength);
+                lineRenderer.SetPosition(1, transform.position + delta);
             }
             else
             {
-                rb.simulated = true;
+                rb.constraints = RigidbodyConstraints2D.None;
                 rb.linearVelocity = delta;
+                thrown = true;
             }
         }
 
