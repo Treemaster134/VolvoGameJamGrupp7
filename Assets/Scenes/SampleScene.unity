@@ -492,6 +492,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2352185691762947123, guid: 460f16640422f9d458cb82786f022ff7, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1243046003}
     - target: {fileID: 2572393919459581974, guid: 460f16640422f9d458cb82786f022ff7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.24
@@ -749,6 +753,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.33333334
       objectReference: {fileID: 0}
+    - target: {fileID: 4652067465975276360, guid: 92e58c16833f90446af4bf083248a0fb, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1243046003}
     - target: {fileID: 4870968972269434733, guid: 92e58c16833f90446af4bf083248a0fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.61
@@ -1394,6 +1402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PetPant
       objectReference: {fileID: 0}
+    - target: {fileID: 5275181801293817139, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1243046003}
     - target: {fileID: 5342231408091017494, guid: 593bfc872aeda454cae7e032e0596e7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.37
@@ -1774,6 +1786,10 @@ PrefabInstance:
     - target: {fileID: 2772437685753650863, guid: 1f10f59a7d40e0b4fb4397f989b97442, type: 3}
       propertyPath: m_Name
       value: PurchaseUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2772437685753650863, guid: 1f10f59a7d40e0b4fb4397f989b97442, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4210568226803873442, guid: 1f10f59a7d40e0b4fb4397f989b97442, type: 3}
       propertyPath: m_text
