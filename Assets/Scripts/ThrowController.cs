@@ -10,6 +10,7 @@ public class ThrowController : MonoBehaviour
     private LineRenderer lineRenderer;
     private Rigidbody2D rb;
     private Camera cam;
+    private Animator animator;
     private bool holdingThrow = false;
     private bool wasThrown = false;
     private Vector2 delta = Vector2.zero;
@@ -28,6 +29,7 @@ public class ThrowController : MonoBehaviour
         grabAction = InputSystem.actions.FindAction("Grab");
         
         lineRenderer = GetComponent<LineRenderer>();
+        animator = GetComponent<Animator>();
         cam = Camera.main;
     }
 
@@ -41,7 +43,8 @@ public class ThrowController : MonoBehaviour
             if (c && grabAction.IsPressed())
             {
                 pant = c.gameObject;
-                c.transform.position = HandTransform.position;
+                c.transform.parent = HandTransform;
+                c.transform.localPosition = Vector3.zero;
                 wasThrown = false;
             }
             else
@@ -71,11 +74,8 @@ public class ThrowController : MonoBehaviour
             }
             else
             {
-                Rigidbody2D rb = pant.GetComponent<Rigidbody2D>();
-                rb.constraints = RigidbodyConstraints2D.None;
-                rb.linearVelocity = delta;
+                animator.SetBool("Throw", true);
                 lineRenderer.enabled = false;
-                wasThrown = true;
             }
         }
 
@@ -85,5 +85,14 @@ public class ThrowController : MonoBehaviour
     float CoolCurve(float x)
     {
         return (x / Mathf.Sqrt(1.0f + x * x)) * 1.4f;
+    }
+
+    public void Throw()
+    {
+        Rigidbody2D rb = pant.GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.linearVelocity = delta;
+        wasThrown = true;
+        animator.SetBool("Throw", false);
     }
 }
