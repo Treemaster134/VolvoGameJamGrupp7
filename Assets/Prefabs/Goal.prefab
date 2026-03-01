@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1300632891336033486}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0042917877, y: 0.3771839, z: -2.2594938}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -59,8 +59,8 @@ Transform:
   m_GameObject: {fileID: 6124015681447121397}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.995708, y: 1.6228161, z: 2.2594938}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.94, y: 0.53, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8290168127504903265}
@@ -109,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: -1568092575
   m_SortingLayer: 4
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7550015476762179609, guid: c54424c8dc7a2c545844342abdfd025a, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5882353}
   m_FlipX: 0
   m_FlipY: 0
@@ -148,8 +148,8 @@ Transform:
   m_GameObject: {fileID: 6940114082404285417}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.995708, y: 1.6228161, z: 2.2594938}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.23617868, y: 0.23617868, z: 0.23617868}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8290168127504903265}
@@ -198,7 +198,7 @@ SpriteRenderer:
   m_SortingLayerID: -1568092575
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 9040127960192308350, guid: d4e8c82ed94a29f469b507228e0a5c89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -263,7 +263,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 7.42, y: 4.03}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
