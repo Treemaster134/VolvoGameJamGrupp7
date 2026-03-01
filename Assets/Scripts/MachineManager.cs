@@ -13,6 +13,7 @@ public class MachineManager : MonoBehaviour
     [SerializeField] private AudioClip moneySound;
     [SerializeField] private AudioClip acceptSound;
     [SerializeField] private AudioClip rejectSound;
+    [SerializeField] private GameObject scoreTextPrefab;
     private AudioSource source;
     
     private float timer;
@@ -50,6 +51,10 @@ public class MachineManager : MonoBehaviour
             moneyParticles.Play();
             moneyParticles2.Play();
             moneyParticles.GetComponent<UIAudioManager>().PlaySound(moneySound);
+
+            GameObject flyText = Instantiate(scoreTextPrefab, score.gameObject.transform);
+            flyText.GetComponent<ScoreTextFlying>().SetText($"+{other.gameObject.GetComponent<PantInformation>().value * UpgradeMultiply}");
+            
             Destroy(other.gameObject);
             startTimer = true;
             source.clip = acceptSound;

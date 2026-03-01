@@ -10,9 +10,9 @@ public class MachineUpgrades : MonoBehaviour
     [SerializeField] ScoreManager score;
    
     [Header("Pant")]
-    [SerializeField] private GameObject storPET;
-    [SerializeField]private GameObject metalCan;
-    [SerializeField]private GameObject glassBottle;
+    [SerializeField] private GameObject[] petBottles;
+    [SerializeField]private GameObject[] metalCans;
+    [SerializeField]private GameObject[] glassBottles;
     [SerializeField] private Rullband rullband;
     [SerializeField]private GameObject metalMachine, glassMachine;
     [SerializeField] TextMeshProUGUI price;
@@ -39,7 +39,12 @@ public class MachineUpgrades : MonoBehaviour
         if (upgrade == UpgradeEnum.First && score.Wallet >= cost)
         {
             score.RemoveScore(cost);
-            rullband.Pant.Add(storPET);
+
+            foreach (GameObject bottle in petBottles)
+            {
+                rullband.Pant.Add(bottle);
+            }
+            
             upgrade = UpgradeEnum.Second;
             gameObject.GetComponent<Image>().color =  new Color(252, 239, 134);
             price.text = $"{cost * 2} kr";
@@ -54,7 +59,12 @@ public class MachineUpgrades : MonoBehaviour
             Debug.Log(metalMachine.gameObject.GetComponent<CircleCollider2D>().enabled);
             metalMachine.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             upgrade = UpgradeEnum.Third;
-            rullband.Pant.Add(metalCan);
+            
+            foreach (GameObject can in metalCans)
+            {
+                rullband.Pant.Add(can);
+            }
+            
             gameObject.GetComponent<Image>().color =  new Color(227, 145, 182);
             price.text = $"{cost * 3} kr";
             
@@ -66,7 +76,12 @@ public class MachineUpgrades : MonoBehaviour
             score.RemoveScore(cost * 3);
             glassMachine.gameObject.GetComponent<CircleCollider2D>().enabled = true;
             glassMachine.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-            rullband.Pant.Add(glassBottle);
+            
+            foreach (GameObject bottle in glassBottles)
+            {
+                rullband.Pant.Add(bottle);
+            }
+            
             gameObject.GetComponent<Image>().color = Color.gray;
             price.text = $"SOLD OUT";
             upgrade = UpgradeEnum.Fourth;

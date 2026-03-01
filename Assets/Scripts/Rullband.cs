@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Serialization;
 
 public class Rullband : MonoBehaviour
@@ -17,9 +18,10 @@ public class Rullband : MonoBehaviour
     [SerializeField] private Vector3 startPosition;
     [SerializeField] private Vector3 endPosition;
     [SerializeField] private float animationTime;
-    [SerializeField] private GameObject prompt;
+    [SerializeField] private Image prompt;
 
     private float animationProgress = 0.0f;
+    private bool animationPromptTurnedOn = false;
     
     private Animator animator;
     private float timer = 3.0f;
@@ -40,6 +42,7 @@ public class Rullband : MonoBehaviour
                 GameObject newPant = Instantiate(Pant[UnityEngine.Random.Range(0, Pant.Count)], spawnArea);
                 newPant.GetComponent<PantInformation>().score = score;
                 animationProgress = 0.0f;
+                animationPromptTurnedOn = false;
                 
                 timer = WaitTime;
             }
@@ -50,12 +53,11 @@ public class Rullband : MonoBehaviour
             animationProgress = Mathf.Min(animationProgress + Time.deltaTime, animationTime);
             spawnArea.localPosition = Vector3.Lerp(startPosition, endPosition, animationProgress / animationTime);
         }
-        else
+        else if(animationPromptTurnedOn == false)
         {
-            prompt.SetActive(true);
+            prompt.enabled = true;
+            animationPromptTurnedOn = true;
         }
-        
-        Debug.Log(animationProgress);
         
     }
 
