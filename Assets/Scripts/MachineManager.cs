@@ -25,17 +25,10 @@ public class MachineManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag(acceptedPant))
         {
+            
             score.Score += other.gameObject.GetComponent<PantInformation>().value * UpgradeMultiply;
             Destroy(other.gameObject);
-            while (timer <= bigTime)
-            {
-                Debug.Log("Inside Loop" + timer);
-                timer += Time.deltaTime;
-                gameObject.transform.localScale = new Vector3(2f,2f,2f);
-            }
-            Debug.Log("Out of Loop");
-            gameObject.transform.localScale = new Vector3(1f,1f,1f);
-            timer = 0;
+            
         }
         else
         {
