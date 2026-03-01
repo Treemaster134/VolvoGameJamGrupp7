@@ -25,7 +25,7 @@ public class MachineManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag(acceptedPant))
         {
-            score.Score += other.gameObject.GetComponent<PantInformation>().value * UpgradeMultiply;
+            score.AddScore(other.gameObject.GetComponent<PantInformation>().value * UpgradeMultiply);
             Destroy(other.gameObject);
             while (timer <= bigTime)
             {
