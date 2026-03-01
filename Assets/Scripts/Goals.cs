@@ -11,6 +11,7 @@ public class Goals : MonoBehaviour
     private float percentage;
     private float wallet;
     private Vector2 originalSize;
+    private bool won;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,18 +30,27 @@ public class Goals : MonoBehaviour
 
     void OnMouseEnter()
     {
-        GoalImage.GetComponent<SpriteRenderer>().color = Color.gray;
+        if (!won)
+        {
+            GoalImage.GetComponent<SpriteRenderer>().color = Color.gray;
+        }
+        
     }
 
     void OnMouseExit()
     {
-        GoalImage.GetComponent<SpriteRenderer>().color = Color.white;
+        if (!won)
+        {
+            GoalImage.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        
     }
     private void OnMouseDown()
     {
         if (score.Wallet >= GoalCost)
         {
             score.RemoveScore(GoalCost);
+            won = true;
             Debug.Log("purchased");
         }
     }
