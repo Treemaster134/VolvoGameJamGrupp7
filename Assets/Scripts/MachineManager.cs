@@ -1,6 +1,5 @@
 using System;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class MachineManager : MonoBehaviour
@@ -11,6 +10,10 @@ public class MachineManager : MonoBehaviour
     [SerializeField] private float bigTime;
     [SerializeField] private ParticleSystem moneyParticles;
     [SerializeField] private AudioClip moneySound;
+    [SerializeField] private AudioClip acceptSound;
+    [SerializeField] private AudioClip rejectSound;
+    private AudioSource source;
+    
     private float timer;
     private bool startTimer = false;
     public int UpgradeMultiply;
@@ -18,6 +21,7 @@ public class MachineManager : MonoBehaviour
     void Start()
     {
         timer = bigTime;
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,12 +50,15 @@ public class MachineManager : MonoBehaviour
             moneyParticles.GetComponent<UIAudioManager>().PlaySound(moneySound);
             Destroy(other.gameObject);
             startTimer = true;
-           
+            source.clip = acceptSound;
         }
         else
         {
           score.Miss(other.gameObject.GetComponent<PantInformation>().value * UpgradeMultiply);
           Destroy(other.gameObject);
+          source.clip = rejectSound;
         }
+        
+        source.Play();
     }
 }

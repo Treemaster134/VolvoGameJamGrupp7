@@ -18,6 +18,7 @@ public class Rullband : MonoBehaviour
     [SerializeField] private Vector3 startPosition;
     [SerializeField] private Vector3 endPosition;
     [SerializeField] private float animationTime;
+    [SerializeField] private GameObject prompt;
 
     private float animationProgress = 0.0f;
     
@@ -27,22 +28,34 @@ public class Rullband : MonoBehaviour
     void Start()
     {
         timer = WaitTime;
-        
     }
 
     void Update()
     {
         if (!Physics2D.OverlapBox(spawnArea.position, Vector3.one, 0, mask))
         {
+            prompt.SetActive(false);
+            
             timer -= Time.deltaTime;
 
             if (timer <= 0.0f)
             {
                 GameObject newPant = Instantiate(Pant[UnityEngine.Random.Range(0, Pant.Count)], spawnArea);
                 newPant.GetComponent<PantInformation>().score = score;
+                animationProgress = 0.0f;
                 
                 timer = WaitTime;
             }
+        }
+
+        if (animationProgress < animationTime && Physics2D.OverlapBox(spawnArea.position, Vector3.one, 0, mask))
+        {
+            animationProgress = Mathf.Min(animationProgress + Time.deltaTime, animationTime);
+            spawnArea.localPosition = Vector3.Lerp(startPosition, endPosition, animationProgress / animationTime);
+        }
+        else
+        {
+            prompt.SetActive(true);
         }
         
         Debug.Log(animationProgress);

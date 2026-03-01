@@ -8,7 +8,7 @@ public class PantInformation : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x < -10.0f || transform.position.x > 10.0f || transform.position.y < -7.0f)
+        if (transform.position.x < -13.0f || transform.position.x > 10.0f || transform.position.y < -7.0f)
         {
             score.Miss(value);
             Destroy(gameObject);
