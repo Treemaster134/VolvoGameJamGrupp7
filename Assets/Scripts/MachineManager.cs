@@ -8,17 +8,30 @@ public class MachineManager : MonoBehaviour
     [SerializeField] private string acceptedPant;
     [SerializeField] private ScoreManager score;
     [SerializeField] private float bigTime;
-    private float timer = 0;
+    private float timer;
+    private bool startTimer = false;
     public int UpgradeMultiply;
     
     void Start()
     {
+        timer = bigTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-      
+        if (startTimer)
+        {
+            timer -= Time.deltaTime;
+            gameObject.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+            while (timer <= 0)
+            {
+                gameObject.transform.localScale = new Vector3(1f,1f,1f);
+                startTimer = false;
+                timer = bigTime;
+            }
+        }
+
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -27,15 +40,8 @@ public class MachineManager : MonoBehaviour
         {
             score.AddScore(other.gameObject.GetComponent<PantInformation>().value * UpgradeMultiply);
             Destroy(other.gameObject);
-            while (timer <= bigTime)
-            {
-                Debug.Log("Inside Loop" + timer);
-                timer += Time.deltaTime;
-                gameObject.transform.localScale = new Vector3(2f,2f,2f);
-            }
-            Debug.Log("Out of Loop");
-            gameObject.transform.localScale = new Vector3(1f,1f,1f);
-            timer = 0;
+            startTimer = true;
+           
         }
         else
         {
