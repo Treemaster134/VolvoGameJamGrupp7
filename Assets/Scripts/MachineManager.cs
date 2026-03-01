@@ -8,6 +8,7 @@ public class MachineManager : MonoBehaviour
     [SerializeField] private string acceptedPant;
     [SerializeField] private ScoreManager score;
     [SerializeField] private float bigTime;
+    [SerializeField] private ParticleSystem moneyParticles;
     private float timer;
     private bool startTimer = false;
     public int UpgradeMultiply;
@@ -39,6 +40,7 @@ public class MachineManager : MonoBehaviour
         if (other.gameObject.CompareTag(acceptedPant))
         {
             score.AddScore(other.gameObject.GetComponent<PantInformation>().value * UpgradeMultiply);
+            moneyParticles.Play();
             Destroy(other.gameObject);
             startTimer = true;
            
