@@ -77,13 +77,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca5a9f0166e181429a32c845a6b474d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  one: {fileID: 1488063923125648384}
+  spawnArea: {fileID: 1488063923125648384}
   Pant:
   - {fileID: 6250527635902066260, guid: 8c21bdc4525682749b27067510f31311, type: 3}
   WaitTime: 3
   mask:
     serializedVersion: 2
     m_Bits: 8
+  score: {fileID: 0}
+  startPosition: {x: -3.97, y: 0, z: 0}
+  endPosition: {x: 1.28, y: 0, z: 0}
+  animationTime: 0.8
 --- !u!1 &4668553914048196887
 GameObject:
   m_ObjectHideFlags: 0

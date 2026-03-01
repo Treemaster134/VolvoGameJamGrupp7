@@ -25,7 +25,18 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = $"{score} kr";
+	    if (score < 1000)
+	    {
+		    scoreText.text = $"{score} kr";
+	    }
+	    else if (score < 1000000)
+	    {
+		    scoreText.text = $"{score / 1000.0f:F3}k kr";
+	    }
+	    else
+	    {
+		    scoreText.text = $"{score / 1000000.0f:F3}M kr";
+	    }
     }
 
 	public void AddScore(int value)
