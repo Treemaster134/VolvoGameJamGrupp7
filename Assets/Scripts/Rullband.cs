@@ -6,7 +6,6 @@ using UnityEngine.Serialization;
 
 public class Rullband : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     [FormerlySerializedAs("one")] [SerializeField] private Transform spawnArea;
    
     public List<GameObject> Pant;
@@ -21,7 +20,6 @@ public class Rullband : MonoBehaviour
     [SerializeField] private GameObject prompt;
 
     private float animationProgress = 0.0f;
-    
     
     private Animator animator;
     private float timer = 3.0f;

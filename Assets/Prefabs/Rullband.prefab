@@ -171,7 +171,7 @@ MonoBehaviour:
   spawnArea: {fileID: 1488063923125648384}
   Pant:
   - {fileID: 6250527635902066260, guid: 8c21bdc4525682749b27067510f31311, type: 3}
-  WaitTime: 3
+  WaitTime: 2
   mask:
     serializedVersion: 2
     m_Bits: 8
@@ -179,6 +179,7 @@ MonoBehaviour:
   startPosition: {x: -3.97, y: 0, z: 0}
   endPosition: {x: 1.28, y: 0, z: 0}
   animationTime: 0.8
+  prompt: {fileID: 0}
 --- !u!95 &8837144005505051000
 Animator:
   serializedVersion: 7
