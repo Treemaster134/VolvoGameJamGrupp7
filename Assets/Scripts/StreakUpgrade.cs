@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StreakUpgrade : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class StreakUpgrade : MonoBehaviour
             score.UpgradeStreak(upgradeCost * 3);
             upgrade = UpgradeEnum.Fourth;
             scoreText.text = $"SOLD OUT";
+            gameObject.GetComponent<Image>().color = Color.gray;
         }
     }
 

@@ -71,6 +71,7 @@ public class MachineUpgrades : MonoBehaviour
             price.text = $"SOLD OUT";
             upgrade = UpgradeEnum.Fourth;
             GPButton.SetActive(true);
+            StreakButton.SetActive(true);
         }
     }
 
