@@ -39,16 +39,9 @@ public class Rullband : MonoBehaviour
             {
                 GameObject newPant = Instantiate(Pant[UnityEngine.Random.Range(0, Pant.Count)], spawnArea);
                 newPant.GetComponent<PantInformation>().score = score;
-                animationProgress = 0.0f;
                 
                 timer = WaitTime;
             }
-        }
-
-        if (animationProgress < animationTime)
-        {
-            animationProgress = Mathf.Min(animationProgress + Time.deltaTime, animationTime);
-            spawnArea.localPosition = Vector3.Lerp(startPosition, endPosition, animationProgress / animationTime);
         }
         
         Debug.Log(animationProgress);
