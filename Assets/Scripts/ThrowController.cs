@@ -20,6 +20,7 @@ public class ThrowController : MonoBehaviour
     [SerializeField] private Transform BeltLocation;
     [SerializeField] private Transform HandTransform;
     [SerializeField] private LayerMask mask;
+    [SerializeField] private GameObject prompt;
     private GameObject pant;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -48,6 +49,7 @@ public class ThrowController : MonoBehaviour
                 pant.transform.localPosition = Vector3.zero;
                 holdingPant = true;
                 animator.SetBool("Hold", true);
+                prompt.SetActive(false);
             }
             else
             {

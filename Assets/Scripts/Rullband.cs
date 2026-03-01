@@ -32,7 +32,6 @@ public class Rullband : MonoBehaviour
     {
         if (!Physics2D.OverlapBox(spawnArea.position, Vector3.one, 0, mask))
         {
-            prompt.SetActive(false);
             
             timer -= Time.deltaTime;
 
