@@ -1435,6 +1435,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1343234116}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2992487134018173020
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1719097707506969214, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719097707506969214, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719097707506969214, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719097707506969214, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719097707506969214, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719097707506969214, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719097707506969214, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719097707506969214, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719097707506969214, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1719097707506969214, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3563665688500867873, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: m_Name
+      value: HomelessMan
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876516345211972967, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: BeltLocation
+      value: 
+      objectReference: {fileID: 3993894647731446360}
+    - target: {fileID: 6876516345211972967, guid: b3ac721e2214a54408c172184c20e625, type: 3}
+      propertyPath: HandTransform
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b3ac721e2214a54408c172184c20e625, type: 3}
 --- !u!1001 &3770569114159896799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1848,71 +1913,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1488063923125648384, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
   m_PrefabInstance: {fileID: 3993894647731446359}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6206618473268355636
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5958633807858263388, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: BeltLocation
-      value: 
-      objectReference: {fileID: 3993894647731446360}
-    - target: {fileID: 5958633807858263388, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: HandTransform
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504385454867376637, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504385454867376637, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504385454867376637, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504385454867376637, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504385454867376637, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504385454867376637, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504385454867376637, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504385454867376637, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504385454867376637, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504385454867376637, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8278138214233328489, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: m_Name
-      value: HomelessMan
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b3ac721e2214a54408c172184c20e625, type: 3}
 --- !u!1001 &7496749715365622329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2237,4 +2237,4 @@ SceneRoots:
   - {fileID: 593020339}
   - {fileID: 871064844}
   - {fileID: 1343234116}
-  - {fileID: 6206618473268355636}
+  - {fileID: 2992487134018173020}
