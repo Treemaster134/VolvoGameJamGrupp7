@@ -27,6 +27,7 @@ public class Rullband : MonoBehaviour
     void Start()
     {
         timer = WaitTime;
+        
     }
 
     void Update()
