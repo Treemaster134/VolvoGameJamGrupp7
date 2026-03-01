@@ -142,9 +142,11 @@ MonoBehaviour:
   score: {fileID: 0}
   bigTime: 0.1
   moneyParticles: {fileID: 0}
+  moneyParticles2: {fileID: 0}
   moneySound: {fileID: 8300000, guid: 2b4696e46da5bdf4dbf68b36f4d60dea, type: 3}
   acceptSound: {fileID: 8300000, guid: 0d9e599029f214e40a30d23cc1b4c75f, type: 3}
   rejectSound: {fileID: 8300000, guid: 3df1121751729d8418475bd71a827d11, type: 3}
+  scoreTextPrefab: {fileID: 3068638522059398575, guid: 9c68878dfbf43714e9ea1ee2821f6ce3, type: 3}
   UpgradeMultiply: 1
 --- !u!82 &2180885704007324557
 AudioSource:

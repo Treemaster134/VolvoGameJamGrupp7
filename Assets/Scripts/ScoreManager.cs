@@ -32,11 +32,11 @@ public class ScoreManager : MonoBehaviour
 	    }
 	    else if (score < 1000000)
 	    {
-		    scoreText.text = $"{score / 1000.0f:F3}k kr";
+		    scoreText.text = $"{score / 1000.0f:F1}k kr";
 	    }
 	    else
 	    {
-		    scoreText.text = $"{score / 1000000.0f:F3}M kr";
+		    scoreText.text = $"{score / 1000000.0f:F1}M kr";
 	    }
 
 	    if (playPositiveSound == true && !positiveSource.isPlaying)

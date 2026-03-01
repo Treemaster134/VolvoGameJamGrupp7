@@ -1601,9 +1601,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: {fileID: 0}
-  storPET: {fileID: 7822358612115866218, guid: cf064097f6309ac4a9191f9b824c8241, type: 3}
-  metalCan: {fileID: 6962447301232662553, guid: 8d08278bb06dddc41afb3a5d7a480297, type: 3}
-  glassBottle: {fileID: 8081906292431347185, guid: 5822465cfe8a6784a9fbf1da8cd12eec, type: 3}
+  petBottles:
+  - {fileID: 7447227075575381441, guid: 85b499d4d91dac046b2bf471044f8765, type: 3}
+  - {fileID: 7822358612115866218, guid: cf064097f6309ac4a9191f9b824c8241, type: 3}
+  - {fileID: 8118468711789339386, guid: 9ea0d81956832aa498fe279d0d8855fa, type: 3}
+  metalCans:
+  - {fileID: 6962447301232662553, guid: 8d08278bb06dddc41afb3a5d7a480297, type: 3}
+  - {fileID: 3022943793036945021, guid: af949aeef08d5e349ab55c8bd7c814ab, type: 3}
+  - {fileID: 1417274545603349152, guid: d779cc2e69d676347a40adeb2cbfc455, type: 3}
+  - {fileID: 5229002578666662709, guid: 5c506147bd9fa424ba780d137bef3933, type: 3}
+  glassBottles:
+  - {fileID: 8081906292431347185, guid: 5822465cfe8a6784a9fbf1da8cd12eec, type: 3}
+  - {fileID: 7465408087973492083, guid: 3c0722b1fba0d5e41b0d976cd8e1e5df, type: 3}
   rullband: {fileID: 0}
   metalMachine: {fileID: 0}
   glassMachine: {fileID: 0}
