@@ -1,62 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1233149941 &-7573944788341387945
+--- !u!1233149941 &-7402281223327211758
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Precis som Zlatan_{-7573944788341387945}
-  m_AudioClip: {fileID: 8300000, guid: ecdf982fc32953047b70ea6f0ad3ee33, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
---- !u!1233149941 &-6775819228818043757
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: "D\xE4r satt den_{-6775819228818043757}"
-  m_AudioClip: {fileID: 8300000, guid: 6a97d8369dd5e6d4395e8991d0f86580, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
---- !u!1233149941 &-4541078900000393857
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: "S\xE5d\xE4r ja gubbar_{-4541078900000393857}"
-  m_AudioClip: {fileID: 8300000, guid: 1622ec87b0f67814c9abdfc45bb85ed8, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
---- !u!1233149941 &-2573868270315496005
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: "Jag \xE4r ett djur p\xE5 att panta_{-2573868270315496005}"
-  m_AudioClip: {fileID: 8300000, guid: eb53d2a7a5eee274ab7d18654d79f888, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
---- !u!1233149941 &814609470830418002
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Rakt i krysset_{814609470830418002}
+  m_Name: Rakt i krysset_{-7402281223327211758}
   m_AudioClip: {fileID: 8300000, guid: 52cd849e2611c5040ae281398fb09850, type: 3}
   m_Volume: 0
   m_Enabled: 1
---- !u!1233149941 &5876535691036684777
+--- !u!1233149941 &-2490942158557046255
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Dra mig bakl\xE4nges_{5876535691036684777}"
+  m_Name: "Ja \xE4r f\xF6r bra_{-2490942158557046255}"
+  m_AudioClip: {fileID: 8300000, guid: 468d51f5fcdba2b438fe4ca4b02e19ce, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &34187047071180739
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: "D\xE4r satt den_{34187047071180739}"
+  m_AudioClip: {fileID: 8300000, guid: 6a97d8369dd5e6d4395e8991d0f86580, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1854112288019372695
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: "Jag \xE4r ett djur p\xE5 att panta_{1854112288019372695}"
+  m_AudioClip: {fileID: 8300000, guid: eb53d2a7a5eee274ab7d18654d79f888, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5992266500331998679
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Jobba jobba jobba_{5992266500331998679}
+  m_AudioClip: {fileID: 8300000, guid: d3c1b61e2b745a9438688883ecafffa2, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &6098547797801661838
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: "Dra mig bakl\xE4nges_{6098547797801661838}"
   m_AudioClip: {fileID: 8300000, guid: a1c50a3d5eac9aa4d9e84c1fe37b2091, type: 3}
   m_Volume: 0
   m_Enabled: 1
@@ -76,40 +76,40 @@ AudioRandomContainer:
   m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
   m_LoopCountRandomizationRange: {x: 0, y: 0}
   m_Elements:
-  - {fileID: 5876535691036684777}
-  - {fileID: -6775819228818043757}
-  - {fileID: 8684218543774195910}
-  - {fileID: -2573868270315496005}
-  - {fileID: 7680819539494741616}
-  - {fileID: -7573944788341387945}
-  - {fileID: 814609470830418002}
-  - {fileID: -4541078900000393857}
+  - {fileID: 6098547797801661838}
+  - {fileID: 34187047071180739}
+  - {fileID: -2490942158557046255}
+  - {fileID: 1854112288019372695}
+  - {fileID: 5992266500331998679}
+  - {fileID: 6904906603590266860}
+  - {fileID: -7402281223327211758}
+  - {fileID: 6449938939175154462}
   m_AvoidRepeatingLast: 2
   m_PlaybackMode: 2
-  m_TriggerMode: 1
+  m_TriggerMode: 0
   m_AutomaticTriggerMode: 1
   m_LoopMode: 2
   m_VolumeRandomizationEnabled: 0
   m_PitchRandomizationEnabled: 0
   m_AutomaticTriggerTimeRandomizationEnabled: 0
   m_LoopCountRandomizationEnabled: 0
---- !u!1233149941 &7680819539494741616
+--- !u!1233149941 &6449938939175154462
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Jobba jobba jobba_{7680819539494741616}
-  m_AudioClip: {fileID: 8300000, guid: d3c1b61e2b745a9438688883ecafffa2, type: 3}
+  m_Name: "S\xE5d\xE4r ja gubbar_{6449938939175154462}"
+  m_AudioClip: {fileID: 8300000, guid: 1622ec87b0f67814c9abdfc45bb85ed8, type: 3}
   m_Volume: 0
   m_Enabled: 1
---- !u!1233149941 &8684218543774195910
+--- !u!1233149941 &6904906603590266860
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Ja \xE4r f\xF6r bra_{8684218543774195910}"
-  m_AudioClip: {fileID: 8300000, guid: 468d51f5fcdba2b438fe4ca4b02e19ce, type: 3}
+  m_Name: Precis som Zlatan_{6904906603590266860}
+  m_AudioClip: {fileID: 8300000, guid: ecdf982fc32953047b70ea6f0ad3ee33, type: 3}
   m_Volume: 0
   m_Enabled: 1

@@ -1,73 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1233149941 &-8234837302466212773
+--- !u!1233149941 &-7643155886067434862
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Pissa p\xE5 panten_{-8234837302466212773}"
-  m_AudioClip: {fileID: 8300000, guid: a074ba82220443047bf53b2a23ee06f3, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
---- !u!1233149941 &-5245102844574526425
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Attans bananer_{-5245102844574526425}
-  m_AudioClip: {fileID: 8300000, guid: 82b601738bf0f3844863aeb79a33343a, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
---- !u!1233149941 &-4645496969735932946
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: "Va g\xF6r ni_{-4645496969735932946}"
-  m_AudioClip: {fileID: 8300000, guid: 7437523c5b0deeb4fb1a71ec74158267, type: 3}
-  m_Volume: 0
-  m_Enabled: 1
---- !u!1233149941 &-4598782616028422808
-AudioContainerElement:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Domarn 2_{-4598782616028422808}
+  m_Name: Domarn 2_{-7643155886067434862}
   m_AudioClip: {fileID: 8300000, guid: 3b3576281312b2b4b819c6c7aab3cfbf, type: 3}
   m_Volume: 0
   m_Enabled: 1
---- !u!1233149941 &778863839566463341
+--- !u!1233149941 &-5090739067024250726
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sopa_{778863839566463341}
-  m_AudioClip: {fileID: 8300000, guid: 4e633577982cafe4595738f8f0d07d3a, type: 3}
+  m_Name: Domarn 1_{-5090739067024250726}
+  m_AudioClip: {fileID: 8300000, guid: 6b3ead5c3774128429bd1f0e264412fa, type: 3}
   m_Volume: 0
   m_Enabled: 1
---- !u!1233149941 &3930357168035121641
+--- !u!1233149941 &-2705410459759875614
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idioter_{3930357168035121641}
+  m_Name: "Va g\xF6r ni_{-2705410459759875614}"
+  m_AudioClip: {fileID: 8300000, guid: 7437523c5b0deeb4fb1a71ec74158267, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &2496288071041125159
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Idioter_{2496288071041125159}
   m_AudioClip: {fileID: 8300000, guid: fa71bec008054b34e894f8dcaa8d9445, type: 3}
   m_Volume: 0
   m_Enabled: 1
---- !u!1233149941 &4087578903902245376
+--- !u!1233149941 &5748807491879639696
 AudioContainerElement:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Domarn 1_{4087578903902245376}
-  m_AudioClip: {fileID: 8300000, guid: 6b3ead5c3774128429bd1f0e264412fa, type: 3}
+  m_Name: Attans bananer_{5748807491879639696}
+  m_AudioClip: {fileID: 8300000, guid: 82b601738bf0f3844863aeb79a33343a, type: 3}
   m_Volume: 0
   m_Enabled: 1
 --- !u!1307931743 &6418180475301049370
@@ -86,19 +66,39 @@ AudioRandomContainer:
   m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
   m_LoopCountRandomizationRange: {x: 0, y: 0}
   m_Elements:
-  - {fileID: -5245102844574526425}
-  - {fileID: 4087578903902245376}
-  - {fileID: 3930357168035121641}
-  - {fileID: -8234837302466212773}
-  - {fileID: 778863839566463341}
-  - {fileID: -4645496969735932946}
-  - {fileID: -4598782616028422808}
+  - {fileID: -5090739067024250726}
+  - {fileID: -7643155886067434862}
+  - {fileID: 5748807491879639696}
+  - {fileID: 2496288071041125159}
+  - {fileID: 9215112317757448348}
+  - {fileID: 9080964114724228748}
+  - {fileID: -2705410459759875614}
   m_AvoidRepeatingLast: 2
   m_PlaybackMode: 2
-  m_TriggerMode: 1
+  m_TriggerMode: 0
   m_AutomaticTriggerMode: 1
   m_LoopMode: 2
   m_VolumeRandomizationEnabled: 0
   m_PitchRandomizationEnabled: 0
   m_AutomaticTriggerTimeRandomizationEnabled: 0
   m_LoopCountRandomizationEnabled: 0
+--- !u!1233149941 &9080964114724228748
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sopa_{9080964114724228748}
+  m_AudioClip: {fileID: 8300000, guid: 4e633577982cafe4595738f8f0d07d3a, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &9215112317757448348
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: "Pissa p\xE5 panten_{9215112317757448348}"
+  m_AudioClip: {fileID: 8300000, guid: a074ba82220443047bf53b2a23ee06f3, type: 3}
+  m_Volume: 0
+  m_Enabled: 1

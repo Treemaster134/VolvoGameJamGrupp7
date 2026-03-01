@@ -18,6 +18,8 @@ public class Rullband : MonoBehaviour
     [SerializeField] private Vector3 startPosition;
     [SerializeField] private Vector3 endPosition;
     [SerializeField] private float animationTime;
+
+    private float animationProgress = 0.0f;
     
     
     private Animator animator;
@@ -25,6 +27,7 @@ public class Rullband : MonoBehaviour
     void Start()
     {
         timer = WaitTime;
+        
     }
 
     void Update()
@@ -35,14 +38,14 @@ public class Rullband : MonoBehaviour
 
             if (timer <= 0.0f)
             {
-                GameObject newPant = Instantiate(Pant[UnityEngine.Random.Range(0, Pant.Count)], spawnArea.position, spawnArea.rotation);
+                GameObject newPant = Instantiate(Pant[UnityEngine.Random.Range(0, Pant.Count)], spawnArea);
                 newPant.GetComponent<PantInformation>().score = score;
-                newPant.transform.parent = spawnArea;
-                newPant.transform.localPosition = Vector3.zero;
                 
                 timer = WaitTime;
             }
         }
+        
+        Debug.Log(animationProgress);
         
     }
 

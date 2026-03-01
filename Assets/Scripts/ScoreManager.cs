@@ -1,18 +1,19 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ScoreManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private int upgradeCost;
+    
     [SerializeField] private AudioSource positiveSource;
     [SerializeField] private AudioSource negativeSource;
     private int score;
 	private int streak = 0;
 	private float streakMultiplier = 1.0f;
-	private float multChange = 0.1f;
+	[FormerlySerializedAs("multChange")] public float MultChange = 0.1f;
 	private bool playPositiveSound = false;
 	private bool playNegativeSound = false;
 
@@ -57,7 +58,7 @@ public class ScoreManager : MonoBehaviour
 	
 		if(streak % 3 == 0)
 		{
-			streakMultiplier += multChange;
+			streakMultiplier += MultChange;
 			playPositiveSound = true;
 		}
 	}
@@ -80,11 +81,11 @@ public class ScoreManager : MonoBehaviour
 		playNegativeSound = true;
 	}
 
-	public void UpgradeStreak()
+	public void UpgradeStreak(int upgradeCost)
 	{
 		if (score >= upgradeCost)
 		{
-			multChange += 0.05f;
+			MultChange += 0.05f;
 			score -= upgradeCost;
 		}
 	}
