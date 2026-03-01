@@ -246,6 +246,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3442635167575529804, guid: 8b16215db456c464ba4de595a306243c, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7563589890597309111, guid: 8b16215db456c464ba4de595a306243c, type: 3}
       propertyPath: m_Name
       value: Money Particles
@@ -1869,6 +1873,18 @@ PrefabInstance:
     - target: {fileID: 7701010750107141713, guid: 14c62707a1809b64daa23f5f08450526, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8676919072441322999, guid: 14c62707a1809b64daa23f5f08450526, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+    - target: {fileID: 8676919072441322999, guid: 14c62707a1809b64daa23f5f08450526, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2140474, guid: 8a89fa14b10d46a99122fd4f73fca9a2, type: 2}
+    - target: {fileID: 8676919072441322999, guid: 14c62707a1809b64daa23f5f08450526, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8815988631245426668, guid: 14c62707a1809b64daa23f5f08450526, type: 3}
       propertyPath: m_AnchorMax.y
