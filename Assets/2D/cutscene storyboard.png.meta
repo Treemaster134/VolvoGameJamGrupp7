@@ -105,7 +105,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2620
+        width: 873
         height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,11 +121,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: cutscene storyboard_1
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 0
+        width: 873
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a355357123b27342bc44fd079878c47
+      internalID: -746773602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutscene storyboard_2
+      rect:
+        serializedVersion: 2
+        x: 1746
+        y: 0
+        width: 873
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f5d280e3cedb84dbe180141086091b
+      internalID: 1899893829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9695b4902185e364c99511856596fa19
     internalID: 0
     vertices: []
     indices: 
@@ -136,6 +180,8 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       cutscene storyboard_0: -939586841270750932
+      cutscene storyboard_1: -746773602
+      cutscene storyboard_2: 1899893829
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

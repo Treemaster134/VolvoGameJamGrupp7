@@ -21,8 +21,12 @@ public class Goals : MonoBehaviour
     {
         if (score.Wallet <= GoalCost && won)
         {
-            bar.gameObject.SetActive(true);
+            bar.transform.localScale = Vector3.one;
             won = false;
+        }
+        if (score.Wallet >= GoalCost)
+        {
+            bar.transform.localScale = Vector3.zero;
         }
     }
     void OnMouseEnter()
@@ -32,10 +36,7 @@ public class Goals : MonoBehaviour
             GoalImage.GetComponent<SpriteRenderer>().color = Color.gray;
         }
 
-        if (score.Wallet >= GoalCost)
-        {
-            bar.gameObject.SetActive(false);
-        }
+        
         
     }
 
