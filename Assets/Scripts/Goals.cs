@@ -41,7 +41,7 @@ public class Goals : MonoBehaviour
         if (score.Wallet >= GoalCost)
         {
             score.RemoveScore(GoalCost);
-            
+            Debug.Log("purchased");
         }
     }
 }

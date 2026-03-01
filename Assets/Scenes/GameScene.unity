@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &32689777 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1709552415357743318, guid: 14c62707a1809b64daa23f5f08450526, type: 3}
+  m_PrefabInstance: {fileID: 3770569114159896799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &142125096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2596,6 +2601,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 705645935}
     - target: {fileID: 7358214861137617106, guid: 14c62707a1809b64daa23f5f08450526, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 32689777}
+    - target: {fileID: 7358214861137617106, guid: 14c62707a1809b64daa23f5f08450526, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 580056152}
@@ -2852,6 +2861,22 @@ PrefabInstance:
     - target: {fileID: 2772437685753650863, guid: 1f10f59a7d40e0b4fb4397f989b97442, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236938935044115829, guid: 1f10f59a7d40e0b4fb4397f989b97442, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 705645935}
+    - target: {fileID: 8236938935044115829, guid: 1f10f59a7d40e0b4fb4397f989b97442, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 32689777}
+    - target: {fileID: 8236938935044115829, guid: 1f10f59a7d40e0b4fb4397f989b97442, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236938935044115829, guid: 1f10f59a7d40e0b4fb4397f989b97442, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8871558846580182948, guid: 1f10f59a7d40e0b4fb4397f989b97442, type: 3}
       propertyPath: m_Pivot.x
