@@ -16,7 +16,7 @@ public class StreakUpgrade : MonoBehaviour
         scoreText.text = $"{upgradeCost} kr";
     }
 
-    void UpgradeStreak()
+    public void UpgradeStreak()
     {
         if (upgrade == UpgradeEnum.First)
         {

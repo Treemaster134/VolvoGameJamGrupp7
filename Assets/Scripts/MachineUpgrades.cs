@@ -22,6 +22,7 @@ public class MachineUpgrades : MonoBehaviour
     [SerializeField] private GameObject SPButton;
     [SerializeField] private GameObject MPButton;
     [SerializeField] private GameObject GPButton;
+    [SerializeField] private GameObject StreakButton;
     
     
     private UpgradeEnum upgrade;
