@@ -7,20 +7,19 @@ public class ScoreManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private int upgradeCost;
+    [SerializeField] private AudioSource positiveSource;
+    [SerializeField] private AudioSource negativeSource;
     private int score;
 	private int streak = 0;
 	private float streakMultiplier = 1.0f;
 	private float multChange = 0.1f;
+	private bool playPositiveSound = false;
+	private bool playNegativeSound = false;
 
 	public int Wallet
 	{
 		get => score;
 	}
-	
-	void Start()
-    {
-       
-    }
 
     // Update is called once per frame
     void Update()
@@ -37,6 +36,18 @@ public class ScoreManager : MonoBehaviour
 	    {
 		    scoreText.text = $"{score / 1000000.0f:F3}M kr";
 	    }
+
+	    if (playPositiveSound == true && !positiveSource.isPlaying)
+	    {
+		    playPositiveSound = false;
+		    positiveSource.Play();
+	    }
+	    
+	    if (playNegativeSound == true && !negativeSource.isPlaying)
+	    {
+		    playNegativeSound = false;
+		    negativeSource.Play();
+	    }
     }
 
 	public void AddScore(int value)
@@ -44,9 +55,10 @@ public class ScoreManager : MonoBehaviour
 		score += (int)(value * streakMultiplier);
 		streak++;
 	
-		if(streak % 5 == 0)
+		if(streak % 3 == 0)
 		{
 			streakMultiplier += multChange;
+			playPositiveSound = true;
 		}
 	}
 
@@ -65,6 +77,7 @@ public class ScoreManager : MonoBehaviour
 		RemoveScore(value);
 		streakMultiplier = 1.0f;
 		streak = 0;
+		playNegativeSound = true;
 	}
 
 	public void UpgradeStreak()
