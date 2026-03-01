@@ -139,6 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceptedPant: PET
   score: {fileID: 0}
+  UpgradeMultiply: 1
 --- !u!1 &4851866365886335545
 GameObject:
   m_ObjectHideFlags: 0

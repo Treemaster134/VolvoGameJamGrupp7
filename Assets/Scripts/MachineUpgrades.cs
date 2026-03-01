@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
@@ -8,11 +9,20 @@ public class MachineUpgrades : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] ScoreManager score;
    
+    [Header("Pant")]
     [SerializeField] private GameObject storPET;
     [SerializeField]private GameObject metalCan;
     [SerializeField]private GameObject glassBottle;
     [SerializeField] private Rullband rullband;
     [SerializeField]private GameObject metalMachine, glassMachine;
+    [SerializeField] TextMeshProUGUI price;
+    [SerializeField] int cost;
+    
+    [Header("Button Unlocks")]
+    [SerializeField] private GameObject SPButton;
+    [SerializeField] private GameObject MPButton;
+    [SerializeField] private GameObject GPButton;
+    
     
     private UpgradeEnum upgrade;
     void Start()
@@ -20,38 +30,48 @@ public class MachineUpgrades : MonoBehaviour
       upgrade = new UpgradeEnum();
       upgrade = UpgradeEnum.First;
       gameObject.GetComponent<Image>().color =  new Color(150, 201, 88);
+      price.text = $"{cost} kr";
     }
     
-    public void NewMachine(int cost)
+    public void NewMachine()
     {
         if (upgrade == UpgradeEnum.First && score.Score >= cost)
         {
             score.Score -= cost;
             rullband.Pant.Add(storPET);
             upgrade = UpgradeEnum.Second;
-            glassMachine.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             gameObject.GetComponent<Image>().color =  new Color(252, 239, 134);
-            Debug.Log("upgrade");
+            price.text = $"{cost * 2} kr";
+            
+            SPButton.SetActive(true);
         }
 
         else if (upgrade == UpgradeEnum.Second && score.Score >= cost * 2)
         {
-            Debug.Log("Upgrade 2");
             score.Score -= cost;
             metalMachine.gameObject.GetComponent<CircleCollider2D>().enabled = true;
+            Debug.Log(metalMachine.gameObject.GetComponent<CircleCollider2D>().enabled);
             metalMachine.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             upgrade = UpgradeEnum.Third;
             rullband.Pant.Add(metalCan);
             gameObject.GetComponent<Image>().color =  new Color(227, 145, 182);
+            price.text = $"{cost * 3} kr";
+            
+            MPButton.SetActive(true);
         }
 
        else  if (upgrade == UpgradeEnum.Third && score.Score >= cost * 3)
-        {Debug.Log("Upgrade 3");
+        {
             score.Score -= cost;
             glassMachine.gameObject.GetComponent<CircleCollider2D>().enabled = true;
             glassMachine.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             rullband.Pant.Add(glassBottle);
             gameObject.GetComponent<Image>().color = Color.gray;
+            price.text = $"SOLD OUT";
+            upgrade = UpgradeEnum.Fourth;
+            GPButton.SetActive(true);
         }
     }
+
+    
 }

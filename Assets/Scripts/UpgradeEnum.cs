@@ -4,5 +4,6 @@ public enum UpgradeEnum
 {
     First, 
     Second, 
-    Third
+    Third,
+    Fourth
 }
