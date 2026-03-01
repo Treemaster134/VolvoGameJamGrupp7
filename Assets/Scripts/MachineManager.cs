@@ -9,6 +9,7 @@ public class MachineManager : MonoBehaviour
     [SerializeField] private ScoreManager score;
     [SerializeField] private float bigTime;
     [SerializeField] private ParticleSystem moneyParticles;
+    [SerializeField] private ParticleSystem moneyParticles2;
     [SerializeField] private AudioClip moneySound;
     [SerializeField] private AudioClip acceptSound;
     [SerializeField] private AudioClip rejectSound;
@@ -47,6 +48,7 @@ public class MachineManager : MonoBehaviour
         {
             score.AddScore(other.gameObject.GetComponent<PantInformation>().value * UpgradeMultiply);
             moneyParticles.Play();
+            moneyParticles2.Play();
             moneyParticles.GetComponent<UIAudioManager>().PlaySound(moneySound);
             Destroy(other.gameObject);
             startTimer = true;
