@@ -1561,10 +1561,6 @@ PrefabInstance:
       propertyPath: BeltLocation
       value: 
       objectReference: {fileID: 3993894647731446360}
-    - target: {fileID: 6876516345211972967, guid: b3ac721e2214a54408c172184c20e625, type: 3}
-      propertyPath: HandTransform
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
