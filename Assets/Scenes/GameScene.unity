@@ -2504,6 +2504,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1741015101267979155, guid: 14c62707a1809b64daa23f5f08450526, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8603642206496753650, guid: 50215920fa42f004ca5a43d65dd3edd9, type: 2}
     - target: {fileID: 1988620511357147254, guid: 14c62707a1809b64daa23f5f08450526, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2532,6 +2536,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2292266666501756043, guid: 14c62707a1809b64daa23f5f08450526, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8603642206496753650, guid: 50215920fa42f004ca5a43d65dd3edd9, type: 2}
     - target: {fileID: 3418531855674345366, guid: 14c62707a1809b64daa23f5f08450526, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -2899,6 +2907,14 @@ PrefabInstance:
       propertyPath: score
       value: 
       objectReference: {fileID: 1243046003}
+    - target: {fileID: 1533760787385251087, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
+      propertyPath: WaitTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533760787385251087, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
+      propertyPath: animationTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1533760787385251087, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
       propertyPath: pant.Array.size
       value: 1
