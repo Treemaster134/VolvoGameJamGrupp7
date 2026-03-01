@@ -13,7 +13,6 @@ public class ThrowController : MonoBehaviour
     private Animator animator;
     private bool holdingThrow = false;
     private bool holdingPant = false;
-    private bool wasThrown = false;
     private Vector2 delta = Vector2.zero;
     [SerializeField] private float maxLineLength;
     [SerializeField] private float maxThrowStrength;
@@ -73,6 +72,16 @@ public class ThrowController : MonoBehaviour
                 
                 lineRenderer.SetPosition(0, HandTransform.position);
                 lineRenderer.SetPosition(1, HandTransform.position + lineDelta);
+
+                if ((lineLength / maxLineLength) < 0.5f)
+                {
+                    lineRenderer.endColor = Color.Lerp(Color.red, Color.yellow, (lineLength / maxLineLength) * 2.0f);
+                }
+                else
+                {
+                    lineRenderer.endColor = Color.Lerp(Color.yellow, Color.green, (lineLength / maxLineLength - 0.5f) * 2.0f);
+                }
+                
             }
             else
             {
