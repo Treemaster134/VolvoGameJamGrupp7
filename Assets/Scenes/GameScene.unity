@@ -2067,6 +2067,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1533760787385251087, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1243046003}
+    - target: {fileID: 1533760787385251087, guid: 7e7f4d1b283016743af88ca2a8a3ddfb, type: 3}
       propertyPath: pant.Array.size
       value: 1
       objectReference: {fileID: 0}

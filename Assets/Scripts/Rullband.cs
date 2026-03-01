@@ -11,6 +11,7 @@ public class Rullband : MonoBehaviour
     public List<GameObject> Pant;
     [SerializeField] private float WaitTime;
     [SerializeField] private LayerMask mask;
+    [SerializeField] private ScoreManager score;
     private float timer = 3.0f;
     void Start()
     {
@@ -26,6 +27,8 @@ public class Rullband : MonoBehaviour
             if (timer <= 0.0f)
             {
                 GameObject newPant = Instantiate(Pant[UnityEngine.Random.Range(0, Pant.Count)], one.position, one.rotation);
+                newPant.GetComponent<PantInformation>().score = score;
+                
                 timer = WaitTime;
             }
         }
