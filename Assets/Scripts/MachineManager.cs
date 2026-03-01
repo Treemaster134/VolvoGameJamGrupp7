@@ -7,11 +7,12 @@ public class MachineManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private string acceptedPant;
     [SerializeField] private ScoreManager score;
+    [SerializeField] private float bigTime;
+    private float timer = 0;
     public int UpgradeMultiply;
     
     void Start()
     {
-      
     }
 
     // Update is called once per frame
@@ -26,6 +27,15 @@ public class MachineManager : MonoBehaviour
         {
             score.Score += other.gameObject.GetComponent<PantInformation>().value * UpgradeMultiply;
             Destroy(other.gameObject);
+            while (timer <= bigTime)
+            {
+                Debug.Log("Inside Loop" + timer);
+                timer += Time.deltaTime;
+                gameObject.transform.localScale = new Vector3(2f,2f,2f);
+            }
+            Debug.Log("Out of Loop");
+            gameObject.transform.localScale = new Vector3(1f,1f,1f);
+            timer = 0;
         }
         else
         {

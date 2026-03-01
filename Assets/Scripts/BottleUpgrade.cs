@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BottleUpgrade : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class BottleUpgrade : MonoBehaviour
         {
             PantMachine.GetComponent<MachineManager>().UpgradeMultiply *= multiplier;
             upgrade = UpgradeEnum.Fourth;
+            gameObject.GetComponent<Image>().color = Color.gray;
             price.text = $"SOLD OUT";
         }
     }
