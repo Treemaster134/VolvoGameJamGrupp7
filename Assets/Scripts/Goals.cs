@@ -16,13 +16,25 @@ public class Goals : MonoBehaviour
     
     
     private bool won;
-    
-    
+
+    void Update()
+    {
+        if (score.Wallet <= GoalCost && won)
+        {
+            bar.gameObject.SetActive(true);
+            won = false;
+        }
+    }
     void OnMouseEnter()
     {
         if (!won)
         {
             GoalImage.GetComponent<SpriteRenderer>().color = Color.gray;
+        }
+
+        if (score.Wallet >= GoalCost)
+        {
+            bar.gameObject.SetActive(false);
         }
         
     }
@@ -37,17 +49,14 @@ public class Goals : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (score.Wallet >= GoalCost && won == false)
+        if (score.Wallet >= GoalCost)
         {
-            Destroy(bar);
-            score.RemoveScore(GoalCost);
-            won = true;
             
+            winCanvas.gameObject.SetActive(true);
+            won = true;
         }
 
-        if (won)
-        {
-            winCanvas.gameObject.SetActive(true);
-        }
+        
+
     }
 }

@@ -300,7 +300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &126104457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4925,6 +4925,10 @@ PrefabInstance:
       propertyPath: score
       value: 
       objectReference: {fileID: 1243046003}
+    - target: {fileID: 7026099209353008483, guid: 8885616d23469ac4992180c8df66a99a, type: 3}
+      propertyPath: winCanvas
+      value: 
+      objectReference: {fileID: 126104459}
     - target: {fileID: 8290168127504903265, guid: 8885616d23469ac4992180c8df66a99a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.4
