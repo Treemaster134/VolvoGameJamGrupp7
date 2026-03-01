@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1303203983
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1412838490018352830, guid: 9c34795d0883c3348a2ae1b955683530, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -140,6 +140,8 @@ MonoBehaviour:
   acceptedPant: PET
   score: {fileID: 0}
   bigTime: 0.1
+  moneyParticles: {fileID: 0}
+  moneySound: {fileID: 0}
   UpgradeMultiply: 1
 --- !u!1 &4851866365886335545
 GameObject:

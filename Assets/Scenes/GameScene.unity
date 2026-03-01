@@ -260,15 +260,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3442635167575529804, guid: 8b16215db456c464ba4de595a306243c, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3442635167575529804, guid: 8b16215db456c464ba4de595a306243c, type: 3}
+      propertyPath: UVModule.sprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 346b45874b08b5d4690223027722b519, type: 3}
+    - target: {fileID: 3442635167575529804, guid: 8b16215db456c464ba4de595a306243c, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].time
-      value: 0.07123287
+      value: 0.04657364
       objectReference: {fileID: 0}
     - target: {fileID: 3442635167575529804, guid: 8b16215db456c464ba4de595a306243c, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].value
-      value: 0.15384698
+      value: 0.33846283
       objectReference: {fileID: 0}
     - target: {fileID: 3442635167575529804, guid: 8b16215db456c464ba4de595a306243c, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].inSlope
@@ -1125,7 +1129,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1303203983
   m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 2584bcf6e414e85419bfeefaad41cc08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
