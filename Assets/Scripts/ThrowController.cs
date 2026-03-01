@@ -12,6 +12,7 @@ public class ThrowController : MonoBehaviour
     private Camera cam;
     private Animator animator;
     private bool holdingThrow = false;
+    private bool holdingPant = false;
     private bool wasThrown = false;
     private Vector2 delta = Vector2.zero;
     [SerializeField] private float maxLineLength;
@@ -36,16 +37,17 @@ public class ThrowController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (wasThrown || pant == null)
+        if (!holdingPant)
         {
             Collider2D c = Physics2D.OverlapBox(BeltLocation.position, Vector3.one, 0, mask);
 
             if (c && grabAction.IsPressed())
             {
                 pant = c.gameObject;
-                c.transform.parent = HandTransform;
-                c.transform.localPosition = Vector3.zero;
-                wasThrown = false;
+                pant.transform.parent = HandTransform;
+                pant.transform.localPosition = Vector3.zero;
+                holdingPant = true;
+                animator.SetBool("Hold", true);
             }
             else
             {
@@ -74,6 +76,7 @@ public class ThrowController : MonoBehaviour
             }
             else
             {
+                animator.SetBool("Hold", false);
                 animator.SetBool("Throw", true);
                 lineRenderer.enabled = false;
             }
@@ -92,7 +95,9 @@ public class ThrowController : MonoBehaviour
         Rigidbody2D rb = pant.GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.None;
         rb.linearVelocity = delta;
-        wasThrown = true;
+        pant.transform.parent.DetachChildren();
+        holdingPant = false;
+        animator.SetBool("Hold", false);
         animator.SetBool("Throw", false);
     }
 }

@@ -52,7 +52,7 @@ public class ScoreManager : MonoBehaviour
 	public void Miss(int value)
 	{
 		RemoveScore(value);
-		streakMultiplier = 0.0f;
+		streakMultiplier = 1.0f;
 		streak = 0;
 	}
 
