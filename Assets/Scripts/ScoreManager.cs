@@ -42,11 +42,16 @@ public class ScoreManager : MonoBehaviour
 	public void RemoveScore(int cost)
 	{
 		score -= cost;
+
+		if (score < 0)
+		{
+			score = 0;
+		}
 	}
 
 	public void Miss(int value)
 	{
-		score -= value;
+		RemoveScore(value);
 		streakMultiplier = 0.0f;
 		streak = 0;
 	}

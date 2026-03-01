@@ -18,12 +18,6 @@ public class BottleUpgrade : MonoBehaviour
         upgrade = UpgradeEnum.First;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UpgradePant()
     {
         if (score.Wallet >= cost && upgrade == UpgradeEnum.First)
