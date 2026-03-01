@@ -25,7 +25,7 @@ public class Rullband : MonoBehaviour
 
             if (timer <= 0.0f)
             {
-                Instantiate(Pant[UnityEngine.Random.Range(0, Pant.Count)], one.position, one.rotation);
+                GameObject newPant = Instantiate(Pant[UnityEngine.Random.Range(0, Pant.Count)], one.position, one.rotation);
                 timer = WaitTime;
             }
         }

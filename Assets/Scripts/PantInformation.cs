@@ -4,6 +4,7 @@
 public class PantInformation : MonoBehaviour
 {
     public int value;
+    public ScoreManager score;
 
     void Update()
     {

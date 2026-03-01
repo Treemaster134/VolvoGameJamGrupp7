@@ -39,7 +39,7 @@ public class MachineManager : MonoBehaviour
         }
         else
         {
-          score.Score -= other.gameObject.GetComponent<PantInformation>().value * UpgradeMultiply;
+          score.Miss(other.gameObject.GetComponent<PantInformation>().value * UpgradeMultiply);
           Destroy(other.gameObject);
         }
     }

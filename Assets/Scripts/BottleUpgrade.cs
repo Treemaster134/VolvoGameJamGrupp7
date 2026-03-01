@@ -26,21 +26,23 @@ public class BottleUpgrade : MonoBehaviour
 
     public void UpgradePant()
     {
-        if (score.Score >= cost && upgrade == UpgradeEnum.First)
+        if (score.Wallet >= cost && upgrade == UpgradeEnum.First)
         {
-            score.Score -= cost;
+            score.RemoveScore(cost);
             PantMachine.GetComponent<MachineManager>().UpgradeMultiply *= multiplier;
             upgrade = UpgradeEnum.Second;
             price.text = $"{cost * 2} kr";
         }
-        else if (score.Score >= cost * 2 && upgrade == UpgradeEnum.Second)
+        else if (score.Wallet >= cost * 2 && upgrade == UpgradeEnum.Second)
         {
+            score.RemoveScore(cost * 2);
             PantMachine.GetComponent<MachineManager>().UpgradeMultiply *= multiplier;
             upgrade = UpgradeEnum.Third;
             price.text = $"{cost * 3} kr";
         }
-        else if (score.Score >= cost * 3 && upgrade == UpgradeEnum.Third)
+        else if (score.Wallet >= cost * 3 && upgrade == UpgradeEnum.Third)
         {
+            score.RemoveScore(cost * 3);
             PantMachine.GetComponent<MachineManager>().UpgradeMultiply *= multiplier;
             upgrade = UpgradeEnum.Fourth;
             gameObject.GetComponent<Image>().color = Color.gray;

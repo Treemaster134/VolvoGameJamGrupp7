@@ -11,7 +11,12 @@ public class ScoreManager : MonoBehaviour
 	private int streak = 0;
 	private float streakMultiplier = 1.0f;
 	private float multChange = 0.1f;
-    
+
+	public int Wallet
+	{
+		get => score;
+	}
+	
 	void Start()
     {
        
@@ -32,8 +37,11 @@ public class ScoreManager : MonoBehaviour
 		{
 			streakMultiplier += multChange;
 		}
-		
-		
+	}
+
+	public void RemoveScore(int cost)
+	{
+		score -= cost;
 	}
 
 	public void Miss(int value)

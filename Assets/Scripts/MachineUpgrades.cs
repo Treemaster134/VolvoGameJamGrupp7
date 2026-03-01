@@ -35,9 +35,9 @@ public class MachineUpgrades : MonoBehaviour
     
     public void NewMachine()
     {
-        if (upgrade == UpgradeEnum.First && score.Score >= cost)
+        if (upgrade == UpgradeEnum.First && score.Wallet >= cost)
         {
-            score.Score -= cost;
+            score.RemoveScore(cost);
             rullband.Pant.Add(storPET);
             upgrade = UpgradeEnum.Second;
             gameObject.GetComponent<Image>().color =  new Color(252, 239, 134);
@@ -46,9 +46,9 @@ public class MachineUpgrades : MonoBehaviour
             SPButton.SetActive(true);
         }
 
-        else if (upgrade == UpgradeEnum.Second && score.Score >= cost * 2)
+        else if (upgrade == UpgradeEnum.Second && score.Wallet >= cost * 2)
         {
-            score.Score -= cost;
+            score.RemoveScore(cost * 2);
             metalMachine.gameObject.GetComponent<CircleCollider2D>().enabled = true;
             Debug.Log(metalMachine.gameObject.GetComponent<CircleCollider2D>().enabled);
             metalMachine.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
@@ -60,9 +60,9 @@ public class MachineUpgrades : MonoBehaviour
             MPButton.SetActive(true);
         }
 
-       else  if (upgrade == UpgradeEnum.Third && score.Score >= cost * 3)
+       else  if (upgrade == UpgradeEnum.Third && score.Wallet >= cost * 3)
         {
-            score.Score -= cost;
+            score.RemoveScore(cost * 3);
             glassMachine.gameObject.GetComponent<CircleCollider2D>().enabled = true;
             glassMachine.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             rullband.Pant.Add(glassBottle);
