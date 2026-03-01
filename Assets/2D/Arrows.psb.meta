@@ -104,9 +104,9 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
-      width: 185
-      height: 117
+      y: 3
+      width: 221
+      height: 186
     spriteID: 7d89b27601589b04c956f337c6cff165
     spriteBone: []
     spriteOutline: []
@@ -116,7 +116,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-    spritePosition: {x: 0, y: 46}
+    spritePosition: {x: 57, y: 0}
   - name: Arrow
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -125,9 +125,9 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 129
-      width: 172
+      x: 129
+      y: 4
+      width: 127
       height: 93
     spriteID: 2ff8646a541f0f644b080b866f413500
     spriteBone: []
@@ -137,8 +137,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 129}
-    spritePosition: {x: 7, y: 0}
+    uvTransform: {x: 129, y: 4}
+    spritePosition: {x: 11, y: 6}
   spriteImportData: []
   rigSpriteImportData: []
   sharedRigSpriteImportData: []
@@ -204,7 +204,7 @@ ScriptedImporter:
     parentIndex: 0
     spriteID: 2ff8646a541f0f644b080b866f413500
     layerID: 3
-    mosaicPosition: {x: 4, y: 129}
+    mosaicPosition: {x: 129, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
