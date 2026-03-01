@@ -1,6 +1,8 @@
 using System;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Goals : MonoBehaviour
 {
@@ -8,26 +10,14 @@ public class Goals : MonoBehaviour
     [SerializeField] private int GoalCost;
     [SerializeField] private GameObject bar;
     [SerializeField] private GameObject GoalImage;
+    [SerializeField] private Canvas winCanvas;
+    
     private float percentage;
-    private float wallet;
-    private Vector2 originalSize;
+    
+    
     private bool won;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        originalSize = bar.transform.localScale;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        wallet = score.Wallet;
-        percentage = wallet / GoalCost;
-       bar.transform.localScale = new Vector2(1 - percentage, originalSize.y);
-       
-    }
-
+    
     void OnMouseEnter()
     {
         if (!won)
@@ -47,11 +37,17 @@ public class Goals : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (score.Wallet >= GoalCost)
+        if (score.Wallet >= GoalCost && won == false)
         {
+            Destroy(bar);
             score.RemoveScore(GoalCost);
             won = true;
-            Debug.Log("purchased");
+            
+        }
+
+        if (won)
+        {
+            winCanvas.gameObject.SetActive(true);
         }
     }
 }

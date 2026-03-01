@@ -16,6 +16,7 @@ public class ScoreManager : MonoBehaviour
 	[FormerlySerializedAs("multChange")] public float MultChange = 0.1f;
 	private bool playPositiveSound = false;
 	private bool playNegativeSound = false;
+	
 
 	public int Wallet
 	{
@@ -55,7 +56,6 @@ public class ScoreManager : MonoBehaviour
 	{
 		score += (int)(value * streakMultiplier);
 		streak++;
-	
 		if(streak % 3 == 0)
 		{
 			streakMultiplier += MultChange;
